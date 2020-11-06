@@ -1,6 +1,6 @@
 FROM vimagick/scrapyd:py3
 MAINTAINER Gatsby,<a347807131@gmail.com>
-ENV SK_USER=admin S_PASSWORD=admin SD_SERVER=localhost
+ENV SK_USER=admin SK_PASSWORD=admin SD_SERVER=localhost
 ENV PIP_MIRROR=https://pypi.tuna.tsinghua.edu.cn/simple/
 WORKDIR /app
 COPY requirements.txt ./

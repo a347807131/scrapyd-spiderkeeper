@@ -12,8 +12,8 @@ RUN apt-get update && \
     apt-get install -y libxml2-dev libxslt1-dev zlib1g-dev
 
 RUN pip install  --upgrade setuptools==45.2.0 &&\
-RUN pip install  spiderkeeper &&\
-    pip install  -r requirements.txt
+    pip install  spiderkeeper
+RUN pip install  -r requirements.txt
 
 EXPOSE 5000 6800
 CMD scrapyd --pidfile= &\

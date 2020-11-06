@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  scrapyd-spiderkeeper:
+    image: a347807131/scrapyd-spiderkeeper
+    build: .
+    environment:
+      - SD_SERVER=
+      - SK_USERNAME=admin
+      - SK_PASSWORD=admin
+  mysql:
+    extends:
+      file: mysql.yml
+      service: mysql
+

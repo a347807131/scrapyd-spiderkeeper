@@ -11,9 +11,9 @@ RUN apt-get update && \
     apt-get install build-essential libssl-dev libffi-dev &&\
     apt-get install libxml2-dev libxslt1-dev zlib1g-dev
 
-RUN pip install -i $PIP_MIRROR --upgrade --no-cache-dir setuptools==45.2.0
-RUN pip install -i $PIP_MIRROR -r requirements.txt &&\
-    pip install -i $PIP_MIRROR --no-cache-dir spiderkeeper
+RUN pip install  --upgrade --no-cache-dir setuptools==45.2.0
+RUN pip install  -r requirements.txt &&\
+    pip install  --no-cache-dir spiderkeeper
 
 EXPOSE 5000 6800
 CMD scrapyd --pidfile= &\

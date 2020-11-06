@@ -3,13 +3,9 @@ version: '2'
 services:
   sdsk:
     image: a347807131/scrapyd-spiderkeeper
-    build: .
+    ports:
+      - 5000:5000
     environment:
-      - SD_SERVER=
       - SK_USERNAME=admin
       - SK_PASSWORD=admin
-  mysql:
-    extends:
-      file: mysql.yml
-      service: mysql
-
+      - SD

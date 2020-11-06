@@ -1,6 +1,6 @@
 FROM vimagick/scrapyd:py3
 MAINTAINER Gatsby,<a347807131@gmail.com>
-ENV SK_USER=admin SK_PASSWORD=admin SD_SERVER=localhost
+ENV SK_USERNAME=admin SK_PASSWORD=admin SD_SERVER=localhost
 ENV PIP_MIRROR=https://pypi.tuna.tsinghua.edu.cn/simple/
 WORKDIR /app
 COPY requirements.txt ./
@@ -17,4 +17,4 @@ RUN pip install  -r requirements.txt
 
 EXPOSE 5000 6800
 CMD scrapyd --pidfile= &\
-    spiderkeeper --server=$SD_SERVER --username=$SK_USERNAME --password=$SK_PASSWORD
+    spiderkeeper --server=http://${SD_SERVER}:6800 --username=$SK_USERNAME --password=$SK_PASSWORD

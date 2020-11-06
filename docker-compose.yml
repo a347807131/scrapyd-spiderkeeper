@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  scrapyd-spiderkeeper:
+  sdsk:
     image: a347807131/scrapyd-spiderkeeper
     build: .
     environment:

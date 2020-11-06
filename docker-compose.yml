@@ -8,4 +8,3 @@ services:
     environment:
       - SK_USERNAME=admin
       - SK_PASSWORD=admin
-      - SD

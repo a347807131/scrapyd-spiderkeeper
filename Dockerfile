@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install vim\
     apt-get install -y build-essential libssl-dev libffi-dev &&\
     apt-get install -y libxml2-dev libxslt1-dev zlib1g-dev
 
-RUN pip install -i $PIP_MIRROR  --upgrade setuptools==45.2.0 &&\
-    pip install -i $PIP_MIRROR  spiderkeeper
+RUN pip install  --upgrade setuptools==45.2.0 &&\
+    pip install  spiderkeeper
 RUN pip install  -r requirements.txt
 
 EXPOSE 5000 6800

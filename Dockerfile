@@ -2,7 +2,7 @@ FROM vimagick/scrapyd:py3
 MAINTAINER Gatsby,<a347807131@gmail.com>
 ENV SK_USERNAME=admin SK_PASSWORD=admin SD_SERVER=localhost
 ENV PIP_MIRROR=https://pypi.tuna.tsinghua.edu.cn/simple/
-WORKDIR /app
+WORKDIR /var/lib/scrapyd
 COPY requirements.txt .
 #解决安装mysqlclient的问题
 RUN apt-get update && apt-get install vim -y &&\
